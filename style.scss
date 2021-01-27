@@ -1,0 +1,593 @@
+$txt: 'sourcehansans-tc';
+$color:#fc0;
+$introTxt:32pt;
+$txtShadow:1px 1px 5px rgb(156, 156, 156);
+body {
+    // position: relative;
+    // width: 100%;
+    // height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.container-fluid {
+    position: relative;
+    height: 100%;
+}
+
+.bgimg {
+    // border: black 10px solid;
+    background: url(img/new-bg.svg) center;
+    // background-repeat: no-repeat;
+    position: absolute;
+    z-index: -20;
+    left: 0;
+    top: 0;
+    // bottom: -300px;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    padding: 5px;
+}
+
+// scroll to top / 頁面跳轉icon 設定
+.topBtn {
+    position: fixed;
+    z-index: 10;
+    right: -92%;
+    bottom: 50px;
+    color: $color;
+    font-size: 40px;
+    display: none;
+    text-shadow: $txtShadow;
+    cursor: pointer;
+    @media (max-width: 720px) {
+        right: 25px;
+        bottom: 35px;
+        font-size: 34px;
+    }
+}
+
+// nav 設定
+.navBar {
+    height: 60px;
+    label {
+        margin: 1.1rem 1rem;
+        font-size: large;
+    }
+    // 漢堡menu設定
+    .checkbtn {
+        font-size: 25px;
+        color: white;
+        float: right;
+        margin: 0.8rem 1.3rem 0.8rem 1rem;
+        display: none;
+        cursor: pointer;
+    }
+    #check {
+        display: none;
+    }
+    // RWD設定
+    @media (max-width:720px) {
+        // div {
+        //     position: fixed;
+        //     /* Make it stick/fixed */
+        //     top: 0;
+        //     /* Stay on top */
+        //     transition: top 0.3s;
+        //     /* Transition effect when sliding down (and up) */
+        // }
+        .checkbtn {
+            display: block;
+        }
+        #check:checked~ul {
+            // menu歸位顯示
+            right: 0;
+        }
+    }
+    // 連結選單設定
+    ul {
+        float: right;
+        padding: 0 20px 0 0;
+        margin: 0;
+        // 將 ul 藏在右邊先不顯示
+        right: -100%;
+        transition: all .5s;
+        // RWD設定
+        @media (max-width: 720px) {
+            height: 100vh;
+            background: #7CD6FF;
+            z-index: 2;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            padding: 6rem 0 0 0;
+        }
+    }
+    li {
+        list-style: none;
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 1.1rem 1.8rem 1.1rem 1.5rem;
+        // 修改文字在這裡改
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        a {
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+        }
+        // hover 效果
+        a:hover {
+            color: $color;
+            // color: black;
+        }
+        .hoverline::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            border-radius: 2px;
+            background: $color;
+            transition: width .3s;
+        }
+        .hoverline:hover::after {
+            width: 100%;
+            transition: width .3s;
+        }
+        // RWD設定
+        @media (max-width:720px) {
+            display: block;
+            padding: 20px 0;
+            a {
+                font-size: larger;
+            }
+            .hoverline::after {
+                content: '';
+                height: 4.5px;
+            }
+        }
+    }
+}
+
+// 介紹文字設定
+.intro {
+    height: 650px;
+    text-align: center;
+    padding: 6.5rem 0 0 0;
+    // 中文字
+    .CNTitle {
+        z-index: 10;
+        font-family: $txt;
+        font-size: 46pt;
+        font-weight: bolder;
+        letter-spacing: 0.6rem;
+        color: $color;
+        text-shadow: $txtShadow;
+        margin: 0;
+        @media (max-width: 720px) {
+            font-size: $introTxt;
+        }
+    }
+    // 英文字
+    .ENTitle {
+        z-index: 10;
+        font-family: 'Roboto', sans-serif, $txt;
+        font-weight: 900;
+        font-size: 46pt;
+        letter-spacing: 0.15rem;
+        color: $color;
+        text-shadow: $txtShadow;
+        @media (max-width: 720px) {
+            font-size: $introTxt;
+        }
+    }
+    // 介紹內文
+    div {
+        padding: 1.2rem 0 80px 0;
+        color: rgb(0, 0, 0);
+        font-size: 12pt;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        line-height: 1.8rem;
+        @media (max-width: 720px) {
+            font-size: 12pt;
+            line-height: 1.8rem;
+        }
+    }
+    // 往下箭頭
+    .arrowDown {
+        // 顏色直接去svg原始碼修改即可
+        width: 50px;
+        cursor: pointer;
+        transition-property: transform;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+        text-shadow: $txtShadow;
+        &:hover,
+        &:active,
+        &:focus {
+            transform: translateY(10px);
+        }
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    #c1 {
+        position: absolute;
+        z-index: -10;
+        left: 25px;
+        top: 10px;
+        width: 300px;
+        opacity: 0.8;
+        animation: could01 20s linear 2s infinite alternate;
+    }
+    #c2 {
+        position: absolute;
+        z-index: -10;
+        right: 60px;
+        top: 10px;
+        width: 150px;
+        opacity: 0.5;
+        animation: could02 25s linear 2s infinite alternate;
+    }
+    #c3 {
+        position: absolute;
+        z-index: -10;
+        right: 20px;
+        top: 200px;
+        width: 250px;
+        opacity: 0.6;
+        animation: could03 10s linear 2s infinite alternate;
+    }
+    #c4 {
+        position: absolute;
+        z-index: -10;
+        left: 50px;
+        top: 250px;
+        width: 150px;
+        opacity: 0.3;
+        // animation: could03 10s linear 2s infinite alternate;
+    }
+    @keyframes could01 {
+        0% {
+            left: 0%;
+        }
+        100% {
+            left: 60%;
+        }
+    }
+    @keyframes could02 {
+        0% {
+            right: 5%;
+        }
+        100% {
+            right: 30%;
+        }
+    }
+    @keyframes could03 {
+        0% {
+            right: 10%;
+        }
+        100% {
+            right: 30%;
+        }
+    }
+}
+
+#fish {
+    height: 100%;
+    width: 100%;
+    height: 1000px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+#fish:hover {
+    // background: url("img/fish2.svg") no-repeat;
+    animation: shake 0.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.shrimp {
+    position: relative;
+    #shrimp {
+        position: absolute;
+        transform: rotate(-10deg);
+        width: 350px;
+        left: 100px;
+        top: 250px;
+        cursor: pointer;
+        object-fit: contain;
+        animation: rolling 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    #shrimp:hover {
+        background: url(img/shrimp.svg) no-repeat;
+    }
+    @keyframes rolling {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(20deg);
+        }
+    }
+}
+
+.starfish {
+    position: relative;
+    #starfish {
+        position: absolute;
+        width: 400px;
+        top: 50px;
+        right: 80px;
+        // transform: rotate(20deg);
+        cursor: pointer;
+    }
+    #starfish:hover {
+        // transform: rotate(20deg);
+        animation: swing 1s 2;
+        background: url(img/starfish.svg) no-repeat;
+        // animation-iteration-count: infinite;
+    }
+    @keyframes swing {
+        0% {
+            transform: translateY(6px);
+        }
+        25% {
+            transform: translateY(-6px);
+        }
+        50% {
+            transform: translateY(3px);
+        }
+        75% {
+            transform: translateY(-3px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+}
+
+.shell {
+    position: relative;
+    #shell {
+        position: absolute;
+        width: 350px;
+        right: 100px;
+        top: -140px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.3s ease-in-out;
+        transform: rotate(5deg);
+    }
+    #shell:hover {
+        opacity: 1;
+    }
+}
+
+.lampfish {
+    position: relative;
+    #lampfish {
+        position: absolute;
+        width: 600px;
+        bottom: 0px;
+        left: 250px;
+        cursor: pointer;
+        filter: contrast(100%);
+        opacity: 0.4;
+        transition: opacity 0.3s ease-in-out;
+        // animation: lamping 4s;
+        // animation-iteration-count: infinite;
+    }
+    #lampfish:hover {
+        background: url(img/lampfish.svg) no-repeat;
+        opacity: 1;
+    }
+}
+
+.col-md-6 {
+    // border: burlywood 3px solid;
+    height: 400px;
+    background-color: transparent;
+}
+
+.col-md-8 {
+    // border: burlywood 3px solid;
+    // height: 1000px;
+    background-color: transparent;
+}
+
+.col-12 {
+    // background-color: rgb(0, 43, 99);
+    background-color: transparent;
+    // border: burlywood 3px solid;
+    height: 200px;
+}
+
+.footer {
+    // background-color: rgb(56, 56, 56);
+    background-color: #252525;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        color: #7b7b7b;
+        margin: 0;
+    }
+}
+
+// ====== modal視窗style開始 =======
+.modal-sm {
+    .modal-content {
+        background-color: #fc0;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        .modal-header {
+            border-bottom: black 2px solid;
+            padding: 0;
+            margin: 0;
+            .close {
+                color: #000;
+            }
+            h5 {
+                font-weight: 600;
+                padding: 5px 0 10px 0;
+                margin: 30px 0 0 0;
+            }
+        }
+        .modal-body {
+            padding: 50px;
+            padding-top: 12px;
+            padding-bottom: 5px;
+            p {
+                margin: 0;
+            }
+        }
+        .modal-footer {
+            border-top: 0 none;
+            padding-bottom: 22px;
+            .btn {
+                border-radius: 20px;
+                width: 80px;
+                color: white;
+                background-color: black;
+            }
+            .btn:hover {
+                color: black;
+                background-color: #ffffff;
+            }
+        }
+    }
+}
+
+
+/* The Modal Box 參照w3c失敗了 */
+
+// .propup {
+//     position: absolute;
+//     background-color: rgba(0, 0, 0, 0.8);
+//     // display: none;
+//     /* Hidden by default */
+//     z-index: 20;
+//     /* Sit on top */
+//     padding-top: 100px;
+//     /* Location of the box */
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     /* Full width */
+//     height: 100%;
+//     /* Full height */
+//     overflow: auto;
+//     /* Enable scroll if needed */
+// }
+// .modal-bg {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translateX(-50%) translateY(-50%);
+//     // margin: auto;
+//     display: block;
+//     width: 80%;
+//     max-width: 700px;
+// }
+// .sample-pic {
+//     position: absolute;
+//     width: 210px;
+//     height: 210px;
+//     border-radius: 50%;
+//     left: 375px;
+//     top: 85px;
+//     background: url(img/bag.jpg) no-repeat center center;
+//     background-size: cover;
+//     box-shadow: 0 0 1px 1px #fc0;
+// }
+// /* Caption of Modal Image (Image Text) - Same Width as the Image */
+// #caption {
+//     position: absolute;
+//     right: 400px;
+//     top: 70px;
+//     h4 {
+//         font-family: $txt;
+//         font-weight: bold;
+//         padding: 5px 0;
+//         line-height: 38px;
+//     }
+//     p {
+//         font-size: 18px;
+//         line-height: 30px;
+//     }
+//     display: block;
+//     width: 320px;
+//     // max-width: 700px;
+//     // text-align: center;
+//     color: rgb(0, 0, 0);
+//     // padding: 10px 0;
+//     // height: 150px;
+// }
+// /* The Close Button */
+// .close {
+//     position: absolute;
+//     top: 40%;
+//     left: 75%;
+//     // transform: translateX(-50%) translateY(-80%);
+//     color: #ffcc00;
+//     font-size: 40px;
+//     font-weight: bold;
+//     transition: 0.3s;
+// }
+// .close:hover,
+// .close:focus {
+//     color: #7cd6ff;
+//     text-decoration: none;
+//     cursor: pointer;
+// }

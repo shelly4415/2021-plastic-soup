@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 連結CSS檔案 -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- 免費試用字體 -->
+    <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-61692.js"></script>
+    <!-- google font -->
+    <!-- 英文字體 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- 思源黑體 -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+    <!-- Bootstrap 4 CND -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- W3C "Font Awesome 5" icon KIT CODE-->
+
+    <!-- bootstrap4 modal 必須連結 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- 引入的最後.js編號是當初註冊的發配編號，沒有填icon跑不出來 -->
+    <script src="https://kit.fontawesome.com/1bda3975cd.js"></script>
+    <!-- 引入jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- bootstrap 全滿的class語法 container-fluid -->
+    <div class="container-fluid">
+        <div class="row">
+            <header>
+                <!-- navigation bar -->
+                <div class="navBar">
+                    <!-- label原意-給予表單控制元件(input/button...)標題，但用label for="input id" 綁定,等同擴大可點擊範圍
+                     點擊 label 內容 = 點擊表單元件，所以點 menu icon = 點選 checkbox 核取方塊-->
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                          <i class="fas fa-bars"></i>
+                        </label>
+                    <label class="logo">LOGO</label>
+                    <ul>
+                        <li><a href="https://www.greenpeace.org/taiwan/update/1782/%E4%BD%A0%E4%B8%8D%E5%90%83%EF%BC%8C%E6%B5%B7%E9%B3%A5%E5%AF%B6%E5%AF%B6%E4%B9%9F%E4%B8%8D%E8%A9%B2%E5%90%83%E7%9A%84%E5%A1%91%E8%86%A0%E6%BF%83%E6%B9%AF/" class="hoverline">關於塑膠濃湯</a></li>
+                        <li><a href="https://oceantrash.rethinktw.org/zh-TW/where" class="hoverline">海廢計畫</a></li>
+                        <li><a href="https://www.facebook.com/SeaYouAgainTW/" class="hoverline">報名淨灘</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <!-- 背景圖片區 -->
+            <div class="bgimg"></div>
+
+            <!-- scroll to top / 頁面跳轉icon，放在外面定位會跑掉，不之為何 -->
+            <div class="topBtn">
+                <i class="fas fa-chevron-circle-up"></i>
+            </div>
+            <!-- 文字介紹區 -->
+            <div class="intro">
+                <h1 class="CNTitle">海洋塑膠濃湯</h1>
+                <h1 class="ENTitle">Plastic Ocean Soup</h1>
+                <div>每次去海邊玩水時總會發現被隨意棄置的廢棄物，</br>你有想過當它們流入海裡，最終都跑到哪裡去了嗎？</br>現在，點擊海洋生物，一起來一探究竟吧！
+                </div>
+                <a href="#fish"><img src="img/arrow.svg" class="arrowDown" alt=""></a>
+                <div id="c1"><img src="img/cloud.svg" alt=""></div>
+                <div id="c2"><img src="img/cloud.svg" alt=""></div>
+                <div id="c3"><img src="img/cloud.svg" alt=""></div>
+                <div id="c4"><img src="img/cloud.svg" alt=""></div>
+            </div>
+
+            <!-- 蝦子 div -->
+            <div class="col-md-4 shrimp">
+                <div data-toggle="modal" data-target=".bd-example-modal-sm">
+                    <img id='shrimp' src="img/shrimp0.svg" alt=""></div>
+                <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>海洋生物的致命大餐</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>現在有近千噸的塑膠碎片漂浮在海面上──這些塑膠垃圾主要由塑膠瓶、塑膠袋，以及各種碎片集合而成。</br>
+                                    最新發現是塑膠微粒主要遺留在海洋生物的腸道中，所以人們進食海產時若連腸子也吞下去的話，就等於將裡面的塑膠一併吃進體內。
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主角魚 div -->
+            <div class="col-md-8 fish" data-toggle="modal" data-target=".modal-fish">
+                <img id='fish' src="img/fish2.svg" alt="">
+            </div>
+            <div class="modal fade modal-fish" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>咦? 塑膠到底在哪裡?</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>2018年環保署公布國內塑膠微粒含量首次調查結果，包括海水、自來水、海灘與貝類在內，大部分的樣品中都含有塑膠微粒，自來水中檢出塑膠皆為纖維狀。
+                                </br>這些微小的塑膠碎片極易被海洋生物給吞下肚，並且在牠們的體內釋放出化學物質影響健康。
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 貝殼 div -->
+            <div class="col-md-6 shell" data-toggle="modal" data-target=".modal-shell">
+                <img id='shell' src="img/shell.svg" alt="">
+            </div>
+            <div class="modal fade modal-shell" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>貽貝的塑膠纖維餐</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>由於貝類是濾食性生物，所以塑膠微粒的誤食以纖維狀為主。</br>
+                                英國艾斯特大學檢驗了數百隻貽貝，結果發現平均每隻都含有4.5條塑膠纖維。</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 海星 div -->
+            <div class="col-md-6 starfish" data-toggle="modal" data-target=".modal-starfish">
+                <img id='starfish' src="img/starfish0.svg" alt="">
+            </div>
+            <div class="modal fade modal-starfish" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>海星偏愛方正的塑膠微粒</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>若塑膠微粒大小同為5mm，立方體塑膠比扁平狀塑膠更容易被海星誤食，幸好再攝入2個小時後就會被排出體外。</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 燈籠魚 div -->
+            <div class="col-12 lampfish" data-toggle="modal" data-target=".modal-lampfish">
+                <img id='lampfish' src="img/lampfish0.svg" alt="">
+            </div>
+            <div class="modal fade modal-lampfish" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>深海魚也受到汙染</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>馬里亞納海溝是目前已知地球上最深的海溝。</br>
+                                2019年研究人員取樣了海溝內的六個深海動物，結果發現每一隻都攝食過微塑膠，並且在海床發現了一個輕薄的購物袋。
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer div -->
+    <div class="footer">
+        <p>Copyright © 2021 ShellyLin. All rights reserved.</p>
+    </div>
+
+    <script src="./js.js"></script>
+</body>
+
+</html>
