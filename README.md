@@ -1,6 +1,6 @@
 # Plastic Ocean Soup 海洋塑膠濃湯
-### 作品連結
-https://shelly4415.github.io/PlasticSoup/.
+[作品連結]
+(https://shelly4415.github.io/PlasticSoup/.)
 ----
 ### 製作緣由
 > 西元1997年，人們在北太平洋中發現了被洋流聚集在一起，足足有兩個美國大、濃稠有密集的海洋垃圾帶，這驚人的影像被稱作”塑膠濃湯”。
