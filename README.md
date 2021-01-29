@@ -15,7 +15,6 @@
 
 ### 首頁
 > 網站標題及內容介紹，右上為相關網站連結
-!(https://drive.google.com/file/d/1s6-aTlCeU2fuWKYJnGTWoUmhu18qQqYJ/view?usp=sharing)
 
 ### 互動css
 > 依據不同的海洋生物有不同的動態效果
