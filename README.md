@@ -14,13 +14,13 @@
 * jQuery
 
 ### 首頁
-網站標題及內容介紹，右上為相關網站連結
+> 網站標題及內容介紹，右上為相關網站連結
 ![image](https://github.com/shelly4415/PlasticSoup/blob/master/%E6%88%AA%E5%9C%96/guthub01.jpg)
 
 ### 互動css
-依據不同的海洋生物有不同的動態效果
+> 依據不同的海洋生物有不同的動態效果
 ![image](https://github.com/shelly4415/PlasticSoup/blob/master/%E6%88%AA%E5%9C%96/guthub02.jpg)
 
 ### 圖片解說
-點擊生物即跳出相關介紹
+> 點擊生物即跳出相關介紹
 ![image](https://github.com/shelly4415/PlasticSoup/blob/master/%E6%88%AA%E5%9C%96/guthub03.jpg)
